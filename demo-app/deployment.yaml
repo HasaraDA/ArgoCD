@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: demo-web-app
-          image: hassalaa/my-node-app:20250322-111015  # Replace with your own app image if needed
+          image: nanajanashia/arecd-app:1.0
           ports:
             - containerPort: 80
