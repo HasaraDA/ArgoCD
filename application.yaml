@@ -1,20 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-web-app
-  namespace: argocd  # Argo CD typically runs in this namespace
+  name: myapp-argo-application
+  namespace: argocd
 spec:
   project: default
+
   source:
-    repoURL: https://github.com/HasaraDA/ArgoCD.git
+    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
     targetRevision: HEAD
-    path: demo-app  # Path inside the repo where manifests are located
-  destination:
+    path: dev
+  destination: 
     server: https://kubernetes.default.svc
-    namespace: demo-web-app
+    namespace: myapp
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
-      - CreateNamespace=true
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
