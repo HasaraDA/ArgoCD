@@ -10,14 +10,14 @@ spec:
     repoURL: https://github.com/HasaraDA/ArgoCD.git
     targetRevision: HEAD
     path: demo-app
-  destination: 
+
+  destination:
     server: https://kubernetes.default.svc
     namespace: simple-node-app
+
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
     automated:
       selfHeal: true
       prune: true
-  imagePullSecrets:
-    - name: regcred
