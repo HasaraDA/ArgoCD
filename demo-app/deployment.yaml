@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: simple-node-app
-  replicas: 2
+  replicas: 6
   template:
     metadata:
       labels:
