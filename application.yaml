@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-username/your-repo.git'
+    repoURL: https://github.com/HasaraDA/ArgoCD.git
     targetRevision: HEAD
     path: demo-app  # Path inside the repo where manifests are located
   destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: default
+    server: https://kubernetes.default.svc
+    namespace: demo-web-app
   syncPolicy:
     automated:
       prune: true

@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: demo-web-app
-          image: nginx:latest  # Replace with your own app image if needed
+          image: hassalaa/my-node-app:20250322-111015  # Replace with your own app image if needed
           ports:
             - containerPort: 80
